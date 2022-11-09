@@ -25,6 +25,5 @@ describe('Funcionalidade Pré cadastro', () => {
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
         cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click() 
     });
-
-    
+   
 });

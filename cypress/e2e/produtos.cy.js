@@ -7,7 +7,7 @@ faker.locale = 'pt_BR';
 describe('Funcionalidade Página de produtos', () => {
 
     before(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
+        cy.visit('produtos/')
 
     });
 
@@ -24,7 +24,7 @@ describe('Funcionalidade Página de produtos', () => {
             .eq(2)
             .click()
         
-        cy.visit('http://lojaebac.ebaconline.art.br/produtos/page/2/')
+        cy.visit('produtos/page/2/')
         cy.get('[class="product-block grid"]')
         .contains('Autumn Pullie')
         .click()
@@ -34,7 +34,7 @@ describe('Funcionalidade Página de produtos', () => {
     it('Deve adicionar um produto ao carrinho', () => {
         var quantidade = 5
         
-        cy.visit('http://lojaebac.ebaconline.art.br/produtos/page/2/')
+        cy.visit('produtos/page/2/')
         cy.get('[class="product-block grid"]')
         .contains('Autumn Pullie').click()
         cy.get('.button-variable-item-S').click()
